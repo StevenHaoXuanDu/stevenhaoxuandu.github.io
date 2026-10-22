@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>欢迎光临我的个人主页</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23000080'/%3E%3Ctext x='8' y='12.5' font-size='11' text-anchor='middle' font-family='Arial' font-weight='bold' fill='%23ff0'%3E%E2%98%85%3C/text%3E%3C/svg%3E">
+<style>
+/* ===== 老网页味道 ===== */
+*{box-sizing:border-box}
+body{
+  margin:0;padding:12px 8px 30px;
+  font:12px/1.7 "SimSun","宋体","Songti SC",serif;color:#000;
+  background-color:#000033;
+  background-image:
+    radial-gradient(1px 1px at 20px 30px,#fff,transparent),
+    radial-gradient(1px 1px at 90px 70px,#ffd,transparent),
+    radial-gradient(1.5px 1.5px at 150px 20px,#fff,transparent),
+    radial-gradient(1px 1px at 60px 120px,#cff,transparent),
+    radial-gradient(1px 1px at 170px 140px,#fff,transparent),
+    radial-gradient(1.5px 1.5px at 120px 100px,#ffc,transparent);
+  background-size:190px 160px;
+  cursor:crosshair;
+}
+a{color:#0000ff;text-decoration:underline} a:visited{color:#800080} a:hover{color:#ff0000;background:#ffff00}
+.wrap{max-width:760px;margin:0 auto;background:#fff;border:3px outset #c0c0c0}
+.bar{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font:bold 12px Tahoma,Arial,sans-serif;padding:3px 6px;display:flex;justify-content:space-between}
+.bar b{font-weight:normal}
+.bar .btns span{display:inline-block;width:16px;height:14px;background:#c0c0c0;border:2px outset #fff;color:#000;font:bold 9px/10px Arial;text-align:center;margin-left:2px}
+
+.head{text-align:center;padding:14px 8px 8px;background:#fffbe0;border-bottom:2px groove #c0c0c0}
+.logo{font:bold 38px/1.1 "Microsoft YaHei","黑体","SimHei",sans-serif;letter-spacing:4px;
+  background:linear-gradient(90deg,#f00,#f80,#ee0,#0c0,#08f,#80f,#f0f);-webkit-background-clip:text;background-clip:text;color:transparent;
+  -webkit-text-stroke:1px #000;filter:drop-shadow(3px 3px 0 #999)}
+.eng{font:italic bold 14px "Comic Sans MS","Comic Sans",cursive;color:#008080;margin-top:4px}
+
+.marq{background:#000;color:#0f0;font:14px "SimSun","宋体",monospace;overflow:hidden;white-space:nowrap;border-top:2px inset #808080;border-bottom:2px inset #808080;padding:3px 0}
+.marq span{display:inline-block;padding-left:100%;animation:marq 22s linear infinite}
+@keyframes marq{to{transform:translateX(-100%)}}
+
+.cols{display:flex}
+.side{width:170px;flex:none;background:#e0e8ff;border-right:2px groove #c0c0c0;padding:10px 8px;text-align:center}
+.side .box{background:#fff;border:2px inset #c0c0c0;margin-bottom:12px;padding:6px 4px;text-align:left}
+.side h4{margin:0 0 4px;background:#000080;color:#ff0;font:bold 12px "SimSun",serif;padding:2px 4px;text-align:center}
+.side ul{margin:0;padding:0 0 0 4px;list-style:none}
+.side li:before{content:"► ";color:#f00;font-size:9px}
+.main{flex:1;padding:12px 16px;min-width:0}
+
+h2{font:bold 15px "SimHei","黑体",sans-serif;color:#fff;background:linear-gradient(90deg,#c00,#fff 95%);padding:3px 8px;margin:18px 0 8px;border-left:6px solid #800}
+h2:first-child{margin-top:0}
+table.info{border-collapse:collapse;width:auto;background:#fff}
+table.info td{border:1px solid #808080;padding:3px 8px;vertical-align:top}
+table.info td:first-child{background:#ffffcc;width:90px;font-weight:bold;white-space:nowrap}
+.blink{animation:blink 1s steps(1) infinite} @keyframes blink{50%{visibility:hidden}}
+.jump{display:inline-block;color:#ffb400;-webkit-text-stroke:.5px #c06000;font-size:14px;animation:jump .7s ease-in-out infinite}
+.jump.j2{animation-delay:.35s}
+@keyframes jump{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(20deg) scale(1.15)}}
+.new{color:#fff;background:#f00;font:bold 10px Arial;padding:0 3px;margin-left:4px;vertical-align:1px}
+.hot{color:#f00;font-weight:bold}
+.rainbow{animation:rb 2s linear infinite;font-weight:bold} @keyframes rb{0%{color:#f00}20%{color:#f80}40%{color:#0a0}60%{color:#00f}80%{color:#a0a}100%{color:#f00}}
+
+.avatar{float:right;margin:0 0 8px 12px;border:4px ridge #c0c0c0;line-height:0;background:#bfe3f5}
+.avatar svg{width:110px;height:110px;display:block}
+
+.uc{margin:16px 0 4px;border:2px solid #000;background:repeating-linear-gradient(45deg,#ffd800 0 14px,#000 14px 28px);padding:4px}
+.uc div{background:#ffd800;text-align:center;font:bold 13px "SimHei",sans-serif;padding:4px;border:1px solid #000}
+
+.counter{display:inline-flex;gap:1px;background:#000;padding:3px;border:2px inset #808080;margin:4px 0}
+.counter span{background:linear-gradient(#333,#000 50%,#222 50%,#111);color:#0f0;font:bold 16px "Courier New",monospace;width:13px;text-align:center;text-shadow:0 0 4px #0f0}
+
+.foot{text-align:center;border-top:2px groove #c0c0c0;padding:10px 8px;background:#f0f0f0;font-size:12px}
+.badges{margin:8px 0}
+.badges svg{width:88px;height:31px;margin:2px;vertical-align:middle}
+.small{color:#666;font-size:11px}
+hr.fancy{border:none;height:3px;background:linear-gradient(90deg,transparent,#f0f,#00f,#0ff,transparent);margin:14px 0}
+
+.spark{position:fixed;pointer-events:none;font-size:12px;z-index:99;animation:fall .9s linear forwards}
+@keyframes fall{to{transform:translateY(26px);opacity:0}}
+
+@media (max-width:640px){
+  .cols{flex-direction:column}
+  .side{width:auto;border-right:none;border-bottom:2px groove #c0c0c0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .side .box{flex:1 1 140px;margin:0}
+  .logo{font-size:28px;letter-spacing:1px}
+  .main{padding:10px}
+  .avatar svg{width:80px;height:80px}
+}
+@media (prefers-reduced-motion:reduce){.marq span,.blink,.rainbow{animation:none}.marq span{padding-left:8px}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="bar"><b>📁 我的个人主页 - Microsoft Internet Explorer</b><span class="btns"><span>_</span><span>□</span><span>×</span></span></div>
+
+  <div class="head">
+    <div class="logo">★ 欢迎光临寒舍 ★</div>
+    <div class="eng">~*~ Welcome to My Homepage ~*~</div>
+  </div>
+
+  <div class="marq"><span>★☆★ 热烈欢迎您的到来！本站内容纯属个人爱好，请多多指教！ ★☆★ 网速慢请耐心等待…… ★☆★ 喜欢本站请按 Ctrl+D 收藏！ ★☆★</span></div>
+
+  <div class="cols">
+    <!-- ===== 左侧栏 ===== -->
+    <div class="side">
+      <div class="box">
+        <h4>◆ 本站导航 ◆</h4>
+        <ul>
+          <li><a href="#about">关于我</a></li>
+          <li><a href="#hobby">兴趣爱好</a></li>
+          <li><a href="#contact">联系站长</a></li>
+        </ul>
+      </div>
+      <div class="box" style="text-align:center">
+        <h4>◆ 访客统计 ◆</h4>
+        您是本站第<br>
+        <span class="counter" id="counter"></span><br>
+        位访客
+      </div>
+      <div class="box" style="text-align:center">
+        <h4>◆ 站点信息 ◆</h4>
+        本站已运行<br><b class="hot" id="days">0</b> 天<br>
+        <span class="small">今天是 <span id="today"></span></span>
+      </div>
+    </div>
+
+    <!-- ===== 主内容 ===== -->
+    <div class="main">
+
+      <h2 id="about">■ 关于我</h2>
+      <div class="avatar" id="avatar" title="这是我（像素版）"></div>
+      <table class="info">
+        <tr><td>网　名</td><td>TristeVen🍁🏳️‍⚧️</td></tr>
+        <tr><td>坐　标</td><td>加拿大 🍁</td></tr>
+        <tr><td>网　龄</td><td>Win10 那年开始冲浪滴~</td></tr>
+        <tr><td>恋　人</td><td><span class="jump">★</span> @C103ofsixteen <span class="jump j2">★</span></td></tr>
+        <tr><td>个性签名</td><td><i>"喜欢你们喵。"</i></td></tr>
+      </table>
+      <p>大家好~ 偶素 TristeVen，欢迎来到偶滴个人主页 ^_^<br>
+      这里素偶在网上滴一个小窝，<span class="rainbow">欢迎常来坐坐！</span></p>
+
+      <h2 id="hobby">■ 兴趣爱好</h2>
+      ◇ 发呆 ing…… 可以呆一整个下午 (～﹃～)<br>
+      ◇ 玩电脑，一坐就素一天，灰常快乐<br>
+      ◇ MC 爱好者，挖矿盖房子停不下来 ⛏<br>
+      ◇ 其他神马的……想到再写 ^o^
+
+      <h2 id="contact">■ 联系站长</h2>
+      📧 E-mail：<a href="mailto:stevenhaoxuandu@gmail.com">stevenhaoxuandu@gmail.com</a><br>
+      💾 GitHub：<a href="https://github.com/StevenHaoXuanDu" target="_blank">github.com/StevenHaoXuanDu</a><br>
+      📒 留言本：<s>坏了</s> 有事请发邮件
+
+      <div class="uc"><div>🚧 本站正在建设中，敬请期待！🚧</div></div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <hr class="fancy">
+    <div class="badges" id="badges"></div>
+    建议使用 <b>1024×768</b> 分辨率、IE 6.0 以上浏览器浏览本站<br>
+    <span class="small">Copyright © 2026 TristeVen. All Rights Reserved. 版权所有，转载请注明出处</span><br>
+    <span class="small">最后更新：<span id="updated">2026-10-21</span> | 本站由 GitHub Pages 强力驱动</span>
+  </div>
+</div>
+
+<script>
+// ===== 可改的设置 =====
+var SITE_START = '2026-10-21';   // 建站日期，用来算"已运行 X 天"
+var COUNTER_BASE = 13579;        // 访客计数起始数字（纯装饰）
+
+// 本站已运行 X 天
+var now=new Date();
+document.getElementById('days').textContent=Math.max(1,Math.floor((now-new Date(SITE_START))/864e5)+1);
+document.getElementById('today').textContent=now.getFullYear()+'年'+(now.getMonth()+1)+'月'+now.getDate()+'日';
+
+// 访客计数器：本地累加，看起来在涨
+var n=COUNTER_BASE;
+try{n=(+localStorage.getItem('hits')||COUNTER_BASE)+1;localStorage.setItem('hits',n)}catch(e){}
+document.getElementById('counter').innerHTML=String(n).padStart(7,'0').split('').map(function(c){return '<span>'+c+'</span>'}).join('');
+
+// 像素头像
+var CAT=[".k........k.",".kk......kk.",".kok....kok.",".kookkkkook.","kooooooooook","koowwoowwook","koowkoowkook","kpoooppooopk","kooowwwwoook",".kooooooook.","..kkkkkkkk..","............"];
+var PAL={k:'#3b2a20',o:'#f2a65a',w:'#fff',p:'#f59ab0'},r='';
+CAT.forEach(function(row,y){row.split('').forEach(function(c,x){if(PAL[c])r+='<rect x="'+x+'" y="'+y+'" width="1.02" height="1.02" fill="'+PAL[c]+'"/>'})});
+document.getElementById('avatar').innerHTML='<svg viewBox="0 0 12 12" shape-rendering="crispEdges">'+r+'</svg>';
+
+// 88x31 小按钮
+function badge(bg,fg,t1,t2,bd){return '<svg viewBox="0 0 88 31" xmlns="http://www.w3.org/2000/svg"><rect width="88" height="31" fill="'+(bd||'#000')+'"/><rect x="1" y="1" width="86" height="29" fill="'+bg+'"/><text x="44" y="'+(t2?13:20)+'" text-anchor="middle" font-family="Verdana,Arial" font-size="'+(t2?8:10)+'" font-weight="bold" fill="'+fg+'">'+t1+'</text>'+(t2?'<text x="44" y="25" text-anchor="middle" font-family="Verdana,Arial" font-size="8" fill="'+fg+'">'+t2+'</text>':'')+'</svg>'}
+document.getElementById('badges').innerHTML=[
+  badge('#c0c0c0','#000080','BEST VIEWED','800×600 或以上'),
+  badge('#000','#0f0','MADE WITH','记事本 Notepad'),
+  badge('#ff0','#f00','拒绝盗链','请勿转载','#f00'),
+  badge('#08f','#fff','HTML 4.01','手写代码'),
+  badge('#fff','#c00','建议收藏','Ctrl + D')
+].join('');
+
+// 标题栏滚动文字
+var tt='★ 欢迎光临我的个人主页 ★ 记得常来玩 ';
+setInterval(function(){tt=tt.slice(1)+tt[0];document.title=tt},350);
+
+// 鼠标星星拖尾
+var last=0;
+document.addEventListener('mousemove',function(e){
+  var t=Date.now(); if(t-last<45) return; last=t;
+  var s=document.createElement('span'); s.className='spark';
+  s.textContent=['✦','✧','★','·'][Math.random()*4|0];
+  s.style.color=['#ff0','#f0f','#0ff','#fff'][Math.random()*4|0];
+  s.style.left=e.clientX+6+'px'; s.style.top=e.clientY+6+'px';
+  document.body.appendChild(s); setTimeout(function(){s.remove()},900);
+});
+</script>
+</body>
+</html>

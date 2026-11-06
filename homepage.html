@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <script>
+    (function () {
+      var t = localStorage.getItem('uwu_theme') ||
+        (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atteven (@calteccc) - /uwu/</title>
+  <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+  <div class="main-container">
+
+    <header class="top-nav">
+      <div class="nav-title">
+        <h2>Atteven💫🇨🇦🇮🇱</h2>
+        <span class="board-tag">/uwu/ - 匿名讨论版</span>
+        <span class="board-tag">欢迎来到Atteven的小站</span>
+        <button type="button" class="theme-toggle" id="themeToggle">☾ Dark</button>
+      </div>
+    </header>
+
+    <!-- 个人主页头部 -->
+    <section class="profile-header">
+      <div class="banner-box">
+        <!-- TODO: 请在同目录下放入 banner.jpg，或修改 src 路径 -->
+        <img src="banner.jpg" alt="Banner" class="banner-img" onerror="this.style.display='none'">
+      </div>
+
+      <div class="profile-body">
+        <div class="avatar-row">
+          <div class="avatar-wrapper">
+            <!-- TODO: 请在同目录下放入 avatar.jpg，或修改 src 路径 -->
+            <img src="image.png" alt="Avatar" class="avatar-img" onerror="this.style.display='none'">
+          </div>
+          <button class="edit-profile-btn" onclick="window.open('https://x.com/calteccc', '_blank')">X / Twitter</button>
+        </div>
+
+        <div class="user-identity">
+          <h1 class="display-name">Atteven💫🇨🇦🇮🇱</h1>
+          <p class="username">X: @calteccc</p>
+        </div>
+
+        
+        <div class="user-bio">
+          <p>在这里填写你的自定义简介...</p>
+        </div>
+
+        
+        <div class="user-meta">
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" class="meta-icon"><path d="M11.96 14.945c-.067 0-.136-.01-.203-.027-1.13-.318-2.097-.986-2.795-1.932-.832-1.125-1.176-2.508-.968-3.893s.942-2.605 2.068-3.438l3.53-2.608c2.322-1.716 5.61-1.224 7.33 1.1.83 1.127 1.175 2.51.967 3.895s-.943 2.605-2.07 3.438l-1.48 1.094c-.333.246-.804.175-1.05-.158-.246-.334-.176-.804.158-1.05l1.48-1.095c.803-.592 1.327-1.463 1.476-2.45.148-.988-.098-1.975-.69-2.778-1.225-1.656-3.572-2.01-5.23-.784l-3.53 2.608c-.802.593-1.326 1.464-1.475 2.45-.15.99.097 1.975.69 2.778.498.675 1.187 1.15 1.992 1.377.4.114.633.528.52.928-.092.33-.394.547-.722.547z"/><path d="M7.27 22.054c-1.61 0-3.197-.735-4.225-2.125-.832-1.127-1.176-2.51-.968-3.894s.943-2.605 2.07-3.438l1.478-1.094c.334-.245.805-.175 1.05.158s.177.804-.157 1.05l-1.48 1.095c-.803.593-1.326 1.464-1.475 2.45-.148.99.097 1.975.69 2.778 1.226 1.657 3.57 2.01 5.23.785l3.528-2.608c1.658-1.225 2.01-3.57.785-5.23-.498-.674-1.187-1.15-1.992-1.376-.4-.113-.633-.527-.52-.927.112-.4.528-.63.926-.522 1.13.318 2.096.986 2.794 1.932 1.717 2.324 1.224 5.612-1.1 7.33l-3.53 2.608c-.933.69-2.023 1.026-3.105 1.026z"/>经验+3</svg>
+            <a href="https://t.me/stevenherenow" target="_blank">Telegram个人聊天账户（骚扰或机器人加了死全家）</a>
+          </span>
+          <span class="meta-item">
+            <svg viewBox="0 0 24 24" class="meta-icon"><path d="M7 4V3h2v1h6V3h2v1h1.5C19.88 4 21 5.12 21 6.5v12c0 1.38-1.12 2.5-2.5 2.5h-13C4.12 21 3 19.88 3 18.5v-12C3 5.12 4.12 4 5.5 4H7zm0 2H5.5c-.27 0-.5.22-.5.5v12c0 .28.23.5.5.5h13c.28 0 .5-.22.5-.5v-12c0-.28-.22-.5-.5-.5H17v1h-2V6H9v1H7V6zm0 6h2v2H7v-2zm4 0h2v2h-2v-2zm4 0h2v2h-2v-2z"/></svg>
+            Joined Janurary, 2012
+          </span>
+        </div>
+
+
+      </div>
+
+      <!-- 分页导航栏 -->
+      <nav class="profile-tabs">
+        <a href="#intro" class="tab-item">简介</a>
+        <a href="#uwu" class="tab-item active">/uwu/</a>
+      </nav>
+    </section>
+
+    <!-- 简介栏（新增） -->
+    <section class="intro-section" id="intro">
+      <div class="intro-header"><h2>简介 / About</h2></div>
+      <div class="intro-body">
+        <!-- TODO: 修改下面的内容 -->
+        <p class="intro-text">QQ: 2379002803
+XChat: @calteccc / @dddx1222
+Telegram: @stevenherenow
+Email: steven.mit@outlook.com
+抖音: TristeVen
+Insta: stevendu0122
+--------------------------------------
+EN,CN,FR,DE,JP //坐标温哥华\\
+某不知名初中生 / 加拿大籍华人 / 2012.01.22组装落地 / 净化网络环境
+爱拍飞机 / 喜欢市中心 / 脑子发育不健全 / 全球最无聊之人
+喜欢交朋友（算了），非常喜欢城建类游戏和交通类游戏，如果有同好，欢迎。本人有点自卑，谅解谢谢。
+如果有心情不好或者需要帮助，请随时加我的QQ，XChat，Telegram平台，既然你愿意点进来看，我将尽力帮助你。
+我是非常久没有动过Webpage架设了，如果有可以更正或者你愿意让我的博客更好，欢迎交流！
+</p>
+        <dl class="intro-list">
+          <dt>昵称</dt><dd>Atteven</dd>
+          <dt>延迟</dt><dd>46000000ms</dd>
+          <dt>电报</dt><dd><a href="https://t.me/stevenherenow" target="_blank">https://t.me/stevenherenow</a></dd>
+        </dl>
+        <div class="intro-tags">
+          <span class="intro-tag">爱睡觉</span>
+          <span class="intro-tag">也许有点阴湿</span>
+          <span class="intro-tag">耍起</span>
+          <span class="intro-tag">夜猫子</span>
+        </div>
+      </div>
+    </section>
+    <section class="partner-box">
+        <div class="partner-label">恋人</div>
+        <div class="partner-name">僧夏猫修</div>
+        <div class="partner-handle">@c103ofsixteen</div>
+    </section>
+
+    <!-- 4chan 风格匿名发帖区 (/uwu/ 版块) -->
+    <section class="chan-board" id="uwu">
+      <div class="board-banner">
+        <h2>/uwu/ - 匿名贴图讨论区</h2>
+      </div>
+
+      <!-- 发帖表单 -->
+      <form id="postForm" class="chan-form">
+      </form>
+
+      <!-- 帖子列表容器 -->
+      <div id="threadList" class="thread-list"></div>
+    </section>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'uwu_board_posts';
+
+
+
+    const defaultPosts = [
+      {
+        id: 1001,
+        name: "Atteven",
+        tripcode: "!calteccc",
+        subject: "Welcome to /uwu/",
+        time: "2026/11/06(Fri) ", 
+        ts:Date.now(),
+        comment: "欢迎来到 /uwu/ 分区。\n 吧主在这坐坐，没什么事 \n 欢迎和我交朋友",
+        image: null,
+        fileName: null
+      }
+    ];
+
+    function loadPosts() {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      return saved ? JSON.parse(saved) : defaultPosts;
+    }
+
+    function savePosts(posts) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(posts));
+    }
+
+    function formatComment(text) {
+      const escaped = text
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+
+      return escaped
+        .split('\n')
+        .map(line => {
+          
+          line = line.replace(/&gt;&gt;(\d+)/g, '<a href="#p$1" class="quote-link">&gt;&gt;$1</a>');
+          if (line.startsWith('&gt;') && !line.startsWith('&gt;&gt;')) {
+            return `<span class="greentext">${line}</span>`;
+          }
+          return line;
+        })
+        .join('<br>');
+    }
+
+    function renderPosts() {
+      const container = document.getElementById('threadList');
+      const posts = loadPosts();
+      container.innerHTML = '';
+
+      posts.forEach((post, index) => {
+        const postEl = document.createElement('article');
+        postEl.className = index === 0 ? 'chan-post op-post' : 'chan-post reply-post';
+        postEl.id = `p${post.id}`;
+
+        let imageHtml = '';
+        if (post.image) {
+          imageHtml = `
+            <div class="file-info">File: <a href="${post.image}" target="_blank">${post.fileName || 'image.jpg'}</a></div>
+            <a href="${post.image}" target="_blank" class="thumb-link">
+              <img src="${post.image}" alt="post image" class="post-thumb">
+            </a>
+          `;
+        }
+
+        postEl.innerHTML = `
+          <div class="post-header">
+            ${post.subject ? `<span class="post-subject">${post.subject}</span>` : ''}
+            <span class="post-name">${post.name || 'Anonymous'}</span>
+            ${post.tripcode ? `<span class="post-trip">${post.tripcode}</span>` : ''}
+            <span class="post-time">${post.time}</span>
+            <a href="javascript:void(0)" class="post-num" onclick="quotePost(${post.id})">No.${post.id}</a>
+          </div>
+          <div class="post-body">
+            ${imageHtml}
+            <blockquote class="post-message">${formatComment(post.comment)}</blockquote>
+          </div>
+        `;
+        container.appendChild(postEl);
+      });
+    }
+
+    function quotePost(id) {
+      const textarea = document.getElementById('postComment');
+      textarea.value += `>>${id}\n`;
+      textarea.focus();
+    }
+
+    function togglePostBox() {
+      const form = document.getElementById('postForm');
+      form.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('postComment').focus();
+    }
+
+    document.getElementById('postForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nameInput = document.getElementById('postName').value.trim();
+      const subInput = document.getElementById('postSub').value.trim();
+      const commentInput = document.getElementById('postComment').value.trim();
+      const fileInput = document.getElementById('postFile');
+
+      if (!commentInput && fileInput.files.length === 0) return;
+
+      const posts = loadPosts();
+      const nextId = posts.length > 0 ? posts[posts.length - 1].id + 1 : 1001;
+      const now = new Date();
+      const timeStr = now.toISOString().slice(0, 10).replace(/-/g, '/') + ' ' + now.toTimeString().slice(0, 8);
+
+      const createNewPost = (imgData, fileName) => {
+        posts.push({
+          id: nextId,
+          name: nameInput || 'Anonymous',
+          tripcode: '',
+          subject: subInput,
+          time: timeStr,
+          comment: commentInput,
+          image: imgData,
+          fileName: fileName
+        });
+        savePosts(posts);
+        renderPosts();
+        document.getElementById('postForm').reset();
+      };
+
+      if (fileInput.files.length > 0) {
+        const file = fileInput.files[0];
+        const reader = new FileReader();
+        reader.onload = function(evt) {
+          createNewPost(evt.target.result, file.name);
+        };
+        reader.readAsDataURL(file);
+      } else {
+        createNewPost(null, null);
+      }
+    });
+
+    // ===== 明暗切换 =====
+    const themeBtn = document.getElementById('themeToggle');
+    function syncThemeBtn() {
+      const dark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeBtn.textContent = dark ? '☀ Light' : '☾ Dark';
+    }
+    themeBtn.addEventListener('click', () => {
+      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try { localStorage.setItem('uwu_theme', next); } catch (e) {}
+      syncThemeBtn();
+    });
+    syncThemeBtn();
+
+    renderPosts();
+  </script>
+</body>
+</html>

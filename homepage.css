@@ -1,0 +1,369 @@
+:root,
+:root[data-theme="light"] {
+  --bg: #eef2ff;
+  --post: #d6daf0;
+  --post-hi: #c9cfea;
+  --card: #f0e0d6;          /* 简介栏 / 表单标题底色 */
+  --border: #b7c5d9;
+  --text: #000000;
+  --muted: #707070;
+  --board-title: #af0a0f;
+  --subject: #0f0c5d;
+  --name: #117743;
+  --link: #34345c;
+  --link-hover: #dd0000;
+  --quote: #aa5454;
+  --green: #a1c446;
+  --input-bg: #ffffff;
+  color-scheme: light;
+}
+ 
+:root[data-theme="dark"] {
+  --bg: #1d1f21;
+  --post: #282a2e;
+  --post-hi: #30333a;
+  --card: #282a2e;
+  --border: #373b41;
+  --text: #c5c8c6;
+  --muted: #8a8e94;
+  --board-title: #e0a080;
+  --subject: #b294bb;
+  --name: #b4be81;
+  --link: #88be81;
+  --link-hover: #cc6666;
+  --quote: #cc6666;
+  --green: #c0cc4d;
+  --input-bg: #1d1f21;
+  color-scheme: dark;
+}
+ 
+* { box-sizing: border-box; }
+ 
+/* 简单过渡：明暗切换与悬停 */
+*, *::before, *::after {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+ 
+html { scroll-behavior: smooth; }
+ 
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, Helvetica, "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+ 
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); }
+ 
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 12px 40px;
+}
+ 
+/* ===== 顶部导航（4chan 风格 [ ] 栏） ===== */
+.top-nav {
+  padding: 4px 0 6px;
+  border-bottom: 1px solid var(--border);
+}
+ 
+.nav-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+}
+ 
+.nav-title h2 { margin: 0; font-size: 15px; color: var(--board-title); }
+ 
+.board-tag { font-size: 12px; color: var(--muted); }
+.board-tag::before { content: "["; margin-right: 2px; }
+.board-tag::after  { content: "]"; margin-left: 2px; }
+ 
+/* 明暗切换按钮：用 margin-left:auto 推到右侧 */
+.theme-toggle {
+  margin-left: auto;
+  padding: 1px 8px;
+  font: inherit;
+  font-size: 12px;
+  color: var(--link);
+  background: var(--post);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.theme-toggle:hover { color: var(--link-hover); background: var(--post-hi); }
+ 
+/* ===== 个人资料头部 ===== */
+.profile-header { margin-top: 12px; }
+ 
+.banner-box {
+  width: 100%;
+  max-width: 480px;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--post);
+  border: 1px solid var(--border);
+}
+ 
+.banner-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+ 
+.profile-body {
+  margin-top: 10px;
+  padding: 8px 10px;
+  background: var(--post);
+  border: 1px solid var(--border);
+}
+ 
+.avatar-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+ 
+.avatar-wrapper {
+  flex: none;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+ 
+.avatar-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+ 
+.edit-profile-btn {
+  margin-left: auto;
+  padding: 2px 10px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.edit-profile-btn:hover { color: var(--link-hover); background: var(--post-hi); }
+ 
+.user-identity { margin-top: -50px; margin-left: 84px; min-height: 50px; }
+.display-name { margin: 0; font-size: 16px; color: var(--name); }
+.username { margin: 0; font-size: 12px; color: var(--muted); }
+ 
+.user-bio { margin: 12px 0 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
+.user-bio p { margin: 0; }
+ 
+.user-meta { display: flex; flex-wrap: wrap; gap: 2px 14px; color: var(--muted); font-size: 12px; }
+.meta-item { display: inline-flex; align-items: center; gap: 4px; }
+.meta-icon { width: 13px; height: 13px; fill: currentColor; }
+ 
+.follow-stats { display: flex; gap: 14px; margin-top: 6px; font-size: 12px; color: var(--muted); }
+.follow-stats strong { color: var(--text); }
+ 
+/* ===== 标签栏：[ /uwu/ ] [ 简介 ] ===== */
+.profile-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 8px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+ 
+.tab-item { color: var(--link); }
+.tab-item::before { content: "[ "; }
+.tab-item::after  { content: " ]"; }
+.tab-item.active { color: var(--board-title); font-weight: 700; }
+.tab-item:hover { color: var(--link-hover); }
+ 
+/* ===== 简介栏 ===== */
+.intro-section {
+  margin-top: 14px;
+  background: var(--post);
+  border: 1px solid var(--border);
+}
+ 
+.intro-header {
+  padding: 3px 8px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+.intro-header h2 { margin: 0; font-size: 13px; color: var(--subject); }
+ 
+.intro-body { padding: 8px 10px; }
+.intro-text { margin: 0 0 10px; white-space: pre-wrap; }
+ 
+.intro-list {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  gap: 3px 10px;
+  margin: 0;
+}
+.intro-list dt { font-weight: 700; color: var(--name); }
+.intro-list dd { margin: 0; word-break: break-word; }
+ 
+.intro-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px; }
+.intro-tag { padding: 0 6px; font-size: 12px; background: var(--bg); border: 1px solid var(--border); }
+.intro-tag:hover { background: var(--post-hi); }
+ 
+/* ===== 恋人栏 ===== */
+.partner-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 14px;
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 700;
+  background: var(--post);
+  border: 1px solid var(--border);
+}
+.partner-box:hover { background: var(--post-hi); }
+
+.partner-label {
+  font-size: 12px;
+  letter-spacing: 4px;
+  color: var(--board-title);
+}
+.partner-label::before,
+.partner-label::after { content: "♥"; margin: 0 6px; font-size: 10px; }
+
+.partner-name {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: var(--name);
+}
+
+.partner-handle {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ===== 版块标题 ===== */
+.chan-board { margin-top: 8px; }
+ 
+.board-banner { margin: 14px 0 10px; text-align: center; }
+.board-banner h2 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -1px;
+  color: var(--board-title);
+}
+ 
+/* ===== 发帖表单（经典 4chan 表格） ===== */
+.chan-form {
+  display: grid;
+  gap: 2px;
+  max-width: 520px;
+  margin: 0 auto 18px;
+}
+ 
+.form-row { display: flex; align-items: stretch; gap: 2px; }
+ 
+.form-row label {
+  flex: 0 0 88px;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+ 
+.form-row input[type="text"],
+.form-row textarea,
+.form-row input[type="file"] {
+  flex: 1;
+  min-width: 0;
+  padding: 3px 5px;
+  font: inherit;
+  color: var(--text);
+  background: var(--input-bg);
+  border: 1px solid var(--border);
+  border-radius: 0;
+}
+ 
+.form-row textarea { resize: vertical; }
+.form-row input:focus,
+.form-row textarea:focus { outline: 1px solid var(--board-title); outline-offset: -1px; }
+ 
+.submit-btn {
+  padding: 0 12px;
+  font: inherit;
+  color: var(--text);
+  background: var(--post);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.submit-btn:hover { color: var(--link-hover); background: var(--post-hi); }
+ 
+/* ===== 帖子 ===== */
+.thread-list { display: grid; gap: 4px; }
+ 
+.chan-post { padding: 4px 8px 6px; animation: post-in .3s ease both; }
+ 
+.op-post { padding-left: 0; border-bottom: 1px solid var(--border); }
+ 
+.reply-post {
+  width: fit-content;
+  max-width: 100%;
+  background: var(--post);
+  border: 1px solid var(--border);
+  border-left: 0;
+  border-top: 0;
+}
+ 
+.post-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 6px;
+  font-size: 13px;
+}
+ 
+.post-subject { color: var(--subject); font-weight: 700; }
+.post-name { color: var(--name); font-weight: 700; }
+.post-trip { color: var(--name); }
+.post-time { color: var(--text); font-size: 12px; }
+.post-num { color: var(--link); }
+.post-num:hover { color: var(--link-hover); }
+ 
+.post-body { display: flow-root; margin-top: 4px; }
+ 
+.file-info { font-size: 12px; color: var(--muted); }
+ 
+.thumb-link { float: left; margin: 3px 20px 6px 0; }
+.post-thumb {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  border: 1px solid var(--border);
+  transition: opacity .2s ease;
+}
+.thumb-link:hover .post-thumb { opacity: .85; }
+ 
+.post-message { margin: 8px 30px 6px 14px; word-break: break-word; }
+ 
+.quote-link { color: var(--quote); text-decoration: underline; }
+.greentext { color: var(--green); }
+ 
+@keyframes post-in {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: none; }
+}
+ 
+/* ===== 手机适配 ===== */
+@media (max-width: 560px) {
+  .form-row label { flex-basis: 68px; }
+  .post-message { margin: 8px 4px; }
+  .intro-list { grid-template-columns: 4em 1fr; }
+}
+ 
+/* 尊重"减少动态效果"设置 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  html { scroll-behavior: auto; }
+}
